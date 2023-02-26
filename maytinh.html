@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>may tinh</title>
+</head>
+<body>
+<form>
+    <input type="number" id="o1">
+    <input type="number" id="o2"> </br>
+    <p id="bang">kết quả</p></br>
+    <button type="button" onclick="cong ();">Addition(+)</button>
+    <button type="button" onclick="tru ();">Subtraction(-)</button>
+    <button type="button" onclick="nhan();">Multiplication(x)</button>
+    <button type="button" onclick="chia();">Division</button>
+</form>
+<script>
+    function cong() {
+        let a = parseInt(document.getElementById('o1').value);
+        let b = parseInt(document.getElementById('o2').value);
+        let c =a + b;
+        document.getElementById('bang').innerHTML = c ;
+    }
+    function tru() {
+        let a = parseInt(document.getElementById('o1').value);
+        let b = parseInt(document.getElementById('o2').value);
+        let c = a-b;
+        document.getElementById('bang').innerHTML = c ;
+    }
+    function nhan(){
+        let a = parseInt(document.getElementById('o1').value);
+        let b = parseInt(document.getElementById('o2').value);
+        let c = a*b;
+        document.getElementById('bang').innerHTML = c;
+    }
+    function chia(){
+        let a = parseInt(document.getElementById('o1').value);
+        let b = parseInt(document.getElementById('o2').value);
+        let c = a/b;
+        document.getElementById('bang').innerHTML = c;
+    }
+
+
+</script>
+
+</body>
+</html>
