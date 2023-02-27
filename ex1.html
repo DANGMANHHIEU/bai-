@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>chi so bmi</title>
+</head>
+<body>
+<h1>Chỉ số cân nặng chiều cao</h1>
+<form>
+    Cân nặng:
+  <input type="number" id="o1"></br>
+    Chiều cao:
+    <input type="number" id="o2"></br>
+    <button type="button" onclick="show();">kiểm tra</button>
+    <div id="demo"></div>
+</form>
+<script>
+   function show() {
+       let a = parseFloat(document.getElementById("o1").value);
+       let b = parseFloat(document.getElementById("o2").value);
+       let bmi = a/(b**2);
+       if (bmi < 18)
+           document.getElementById('demo').innerHTML = 'Underweight';
+       else if (bmi < 25)
+               document.getElementById('demo').innerHTML = 'Normal';
+           else if (bmi < 30)
+               document.getElementById('demo').innerHTML = 'overweith';
+           else
+               document.getElementById('demo').innerHTML = 'obese';
+   }
+</script>
+
+</body>
+</html>
